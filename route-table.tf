@@ -13,7 +13,7 @@ resource "aws_route_table" "public_rt" {
 }
 
 # Public Subnet Association 
-resource "aws_route_table_association" "public_subnet)rt_association" {
+resource "aws_route_table_association" "public_subnet_rt_association" {
   count          = length(aws_subnet.public_subnet.*.id)
 
   subnet_id      = element(aws_subnet.public_subnet.*.id, count.index)
