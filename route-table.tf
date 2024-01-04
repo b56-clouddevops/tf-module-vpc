@@ -32,7 +32,7 @@ resource "aws_route_table" "private_subnet" {
 
   route {
     cidr_block                = var.DEFAULT_VPC_CIDR
-    vpc_peering_connection_id = ????
+    vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
   }
 
   tags = {
