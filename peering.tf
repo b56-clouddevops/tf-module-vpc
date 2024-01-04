@@ -5,4 +5,3 @@ resource "aws_vpc_peering_connection" "peer" {
   auto_accept   = true                            # This works only if both the VPC's are in the same account.
 }
 
-
