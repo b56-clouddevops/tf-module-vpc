@@ -30,6 +30,11 @@ resource "aws_route_table" "private_subnet" {
     nat_gateway_id = aws_nat_gateway.ngw.id
   }
 
+  route {
+    cidr_block                = var.DEFAULT_VPC_CIDR
+    vpc_peering_connection_id = ????
+  }
+
   tags = {
     Name = "roboshop-${var.ENV}-private-rt"
   }
