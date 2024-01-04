@@ -31,7 +31,7 @@ resource "aws_route_table" "private_subnet" {
   }
 
   tags = {
-    Name = "roboshop-${var.ENV}-public-rt"
+    Name = "roboshop-${var.ENV}-private-rt"
   }
 }
 
